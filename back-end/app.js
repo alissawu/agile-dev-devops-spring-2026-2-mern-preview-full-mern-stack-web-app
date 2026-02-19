@@ -80,3 +80,15 @@ app.post('/messages/save', async (req, res) => {
 
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
+
+// route for about us page
+app.get('/about', (req, res) => {
+  res.json({
+    name: 'Alissa Wu',
+    bio: [
+      "Hi, I'm Alissa. I'm a junior at NYU's Courant Institute studying Computer Science and Mathematics. Last summer I interned at Visa, and right now I'm trying to get better at TypeScript. I like working on side projects in my free time, mostly because I think the best way to learn something is to just build stuff with it.",
+      "Outside of coding, I like traveling. I really liked being in the Bay this summer and I hope to visit Asia again soon. I like finding aesthetic study cafes and dessert spots. My favorite food is steak (medium rare) and I enjoy cooking it with friends or eating it at restaurants. Also, my favorite animal is a cat."
+    ],
+    imageUrl: '/alissa.jpg',
+  })
+})
